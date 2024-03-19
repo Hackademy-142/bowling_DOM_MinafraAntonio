@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!-- link bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- link css -->
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body class="position-relative">
+    <!-- SEZIONE DEL TITOLO -->
+    <div class="container ">
+        <div class="row justify-content-around">
+            <div class="col-12">
+                <h1 class="display-1 text-center my-5">SALA DA BOWLING</h1>
+            </div>
+        </div>
+    </div>
+    <!-- FINE SEZIONE DEL TITOLO -->
+
+    <!-- SEZIONE MENU -->
+    <div class="container my-5">
+        <div class="row justify-content-around">
+            <!-- COLONNA GIOCATORE -->
+            <div class="col-4 ">
+                <h3 class="text-center display-6">NUOVO GIOCATORE</h3>
+                <div class="boxMenu d-flex align-items-center justify-content-center">
+                    <div class=" w-75">
+                        <label for="inputNewPlayer" class="form-label text-center fs-3 w-100">Nome Giocatore</label>
+                        <input type="text" class="form-control" id="inputNewPlayer" placeholder="inserisci nome giocatore">
+                        <button id="btnNewPlayer" class="btn btn-primary w-100 mt-3">Aggiungi</button>
+                      </div>
+                </div>
+            </div>
+            <!-- COLONNA MENU DI GIOCO -->
+            <div class="col-4 ">
+                <h3 class="text-center display-6">MENU DI GIOCO</h3>
+                <div class="boxMenu d-flex flex-column justify-content-center align-items-center">
+                    <!-- inizia partita -->
+                    <button id="btnStart" class="btn m-3 btn-outline-success w-75">Inizia Partita</button>
+                    <!-- bottone turno -->
+                    <button id="playRound" class="btn m-3 d-none btn-success w-75">Gioca turno</button>
+                    <!-- risultato finale -->
+                    <button id="btnResults" type="button" class="btn m-3 btn-primary w-75 my-1 d-none" data-bs-toggle="modal" data-bs-target="#classificaModale">Risultati</button>
+                    <!-- reset gioco -->
+                    <button id="btnResetGame" class="btn m-3 btn-secondary w-75">Riavvia gioco</button>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FINE SEZIONE MENU -->
+
+    <!-- SEZIONE GIOCATORI -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 boxMenu">
+                <!-- TABLE -->
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Giocatore</th>
+                        <th scope="col">1</th>
+                        <th scope="col">2</th>
+                        <th scope="col">3</th>
+                        <th scope="col">4</th>
+                        <th scope="col">5</th>
+                        <th scope="col">6</th>
+                        <th scope="col">7</th>
+                        <th scope="col">8</th>
+                        <th scope="col">9</th>
+                        <th scope="col">10</th>
+                        <th scope="col">TOT</th>
+                      </tr>
+                    </thead>
+                    <tbody id="playersWrapper">
+
+                    </tbody>
+                  </table>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+        <!-- Modale Classifica -->
+        <div class="modal fade" id="classificaModale" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalWinner"></h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modalBody" class="modal-body">
+
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    <!-- cdn bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- my js -->
+    <script src="./main.js"></script>
+  </body>
+</html>

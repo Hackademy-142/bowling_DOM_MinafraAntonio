@@ -1,0 +1,13 @@
+.boxMenu {
+    height: 400px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.img-strike{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 600px;
+    width: 600px;
+}
